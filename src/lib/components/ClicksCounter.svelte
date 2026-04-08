@@ -1,18 +1,12 @@
 <script>
-let { initialCount: count = $bindable() } = $props();
-let doubled = $derived(count * 2);
+let count = $state(0)
+let doubled = $derived(count * 2)
 </script>
 
 <h3>Clicks Counter</h3>
 
 <button onclick={() => count++}>
-    clicks: {count}
+    Clicks:{count}
 </button>
 
-<style>
-    h1 {
-        color: deepskyblue;
-    }
-</style>
-
-<span>doubled is {doubled}</span>
+<span> doubled is {doubled}</span>
