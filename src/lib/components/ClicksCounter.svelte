@@ -1,5 +1,5 @@
 <script>
-let { initialCount: count } = $props(); // initalcount parte delle props 
+let { initialCount: count = 0 } = $props(); // initalcount parte delle props 
 
 let doubled = $derived(count * 2);
 </script>
