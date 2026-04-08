@@ -5,12 +5,11 @@ import { onMount} from "svelte"
 
     let canvas 
 
-    onMount(() => {
+    $effect(() => {
    const context = canvas.getContext("2d");
-    context.clearRect(0, 0, canvas.width, canvas.height);
-
-    context.fillStyle = color;
-    context.fillRect(0, 0, size, size);
+   context.clearRect(0, 0, canvas.width, canvas.height);
+   context.fillStyle = color;
+   context.fillRect(0, 0, size, size);
     }   )
 
 
@@ -31,7 +30,7 @@ import { onMount} from "svelte"
     </nav>
 </article>
 
-<p>{size} {color}</p>
+
 
 <style>
     article {
