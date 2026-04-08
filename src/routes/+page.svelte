@@ -1,6 +1,7 @@
 <script>
-import CanvasSquare from "$lib/components/CanvasSquare.svelte";
-import ClicksCounter from "$lib/components/ClicksCounter.svelte";
+  import CanvasSquare from "$lib/components/CanvasSquare.svelte";
+  import ClicksCounter from "$lib/components/ClicksCounter.svelte";
+  import ToDoList from "$lib/components/ToDoList.svelte";
 
 let count = $state(5);
 </script>
@@ -24,6 +25,7 @@ let count = $state(5);
 
 <p>count from parent is {count}</p> 
 <CanvasSquare />
+<ToDoList />
 
 <style>
     h1 {
