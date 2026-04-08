@@ -1,4 +1,6 @@
 <script>
+let count = $state(0)
+console.log("Hello world");
 import ClicksCounter from "$lib/components/ClicksCounter.svelte";
 
 let count = $state(5);
@@ -9,6 +11,11 @@ let count = $state(5);
 
 <ClicksCounter bind:initialCount={count} />
 <p> count from parent is {count}</p>
+
+<button on:click={() => count++}>
+Clicks:{count}
+
+</button>
 
 <style>
     h1 {
